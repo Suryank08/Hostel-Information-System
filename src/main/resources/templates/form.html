@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+
+</head>
+<body>
+<nav>
+    <div class="logo">
+        <p>Hostel Management System</p>
+    </div>
+    <div class="tab">
+        <p>  <a th:href="@{/findForm}">Find Student</a></p>
+    </div>
+</nav>
+
+<div class="container">
+    <h2>Enter Student Details</h2>
+    <form th:action="@{/processStudentForm}" th:object="${student}" method="post" >
+        <div class="form">
+            <div class="form-group">
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" th:field="*{name}" name="studentName" required>
+            </div>
+            <div class="form-group">
+                <label for="studentRollNo">Student Roll No:</label>
+                <input type="text" id="studentRollNo"  th:field="*{rollNumber}"name="studentRollNo" required>
+            </div>
+            <div class="form-group">
+                <label for="studentBranch">Student Branch:</label>
+                <input type="text" id="studentBranch" th:field="*{branch}" name="studentYear" required>
+            </div>
+            <div class="form-group">
+                <label for="studentAddress">Student Address:</label>
+                <input type="text" id="studentAddress" th:field="*{address}" name="studentAddress" required>
+            </div>
+            <div class="form-group">
+                <label for="studentMob">Student MobileNumber:</label>
+                <input type="tel" id="studentMob" th:field="*{mobileNumber}" name="studentAddress" required>
+            </div>
+            <div class="form-group">
+                <label for="studentHostel">Student Hostel:</label>
+                <select  id="studentHostel" th:field="*{hostelName}">
+                    <option th:value="Vridavan">Vridavan</option>
+                    <option th:value="Saket">Saket</option>
+                    <option th:value="Panchvati">Panchvati</option>
+                    <option th:value="JaiBharat">Jai Bharat</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="studentRoomNo">Student Room No:</label>
+                <input type="text" id="studentRoomNo"  th:field="*{roomNumber}" name="studentRoomNo" required>
+            </div>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

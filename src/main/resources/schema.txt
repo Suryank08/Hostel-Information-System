@@ -1,0 +1,26 @@
+ DROP TABLE IF EXISTS public.student;
+ DROP TABLE IF EXISTS public.hostel_details;
+
+-- CREATE TABLE IF NOT EXISTS public.hostel_details
+-- (
+--     hostel_id  serial ,
+--     hostel_name character varying(250) COLLATE pg_catalog."default" NOT NULL,
+--     roomnumber character varying(10) COLLATE pg_catalog."default",
+--     CONSTRAINT hostel_pkey PRIMARY KEY (hostel_id)
+-- );
+
+CREATE TABLE IF NOT EXISTS public.student
+(
+    student_id serial,
+    name character varying(250) COLLATE pg_catalog."default",
+    roll_number character varying(250) UNIQUE NOT NULL,
+    branch character varying(250) COLLATE pg_catalog."default",
+    address character varying(250) COLLATE pg_catalog."default",
+    mobile_number character varying(12) COLLATE pg_catalog."default",
+    hostel_name varchar(250),
+	room_number varchar(10),
+    CONSTRAINT student_pkey PRIMARY KEY (student_id)
+
+
+)
+

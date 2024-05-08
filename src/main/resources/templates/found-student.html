@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Found Student</title>
+    <link rel="stylesheet" th:href="@{/css/found.css}">
+</head>
+<body>
+<nav>
+    <div class="logo">
+        <p>Hostel Management System</p>
+    </div>
+    <div class="tab">
+        <p> <a th:href="@{/}">New Student</a> </p>
+        <p>  <a th:href="@{/findForm}">Find Student</a></p>
+    </div>
+</nav>
+<h2>Student Record Found</h2>
+<div>
+    <p><strong>Name:</strong> <span th:text="${searchedStudent.name}"></span></p>
+    <p><strong>Roll Number:</strong> <span th:text="${searchedStudent.rollNumber}"></span></p>
+    <p><strong>Branch:</strong> <span th:text="${searchedStudent.Branch}"></span></p>
+    <p><strong>Address:</strong> <span th:text="${searchedStudent.address}"></span></p>
+    <p><strong>Mobile Number:</strong> <span th:text="${searchedStudent.mobileNumber}"></span></p>
+    <p><strong>Hostel Name:</strong> <span th:text="${searchedStudent.hostelName}"></span></p>
+    <p><strong>Room Number:</strong> <span th:text="${searchedStudent.roomNumber}"></span></p>
+</div>
+</body>
+</html>

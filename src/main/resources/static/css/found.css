@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #393e41;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+   justify-content: space-evenly;
+   color: #fff;
+   font-size: 1.5rem;
+}
+.tab{
+
+    display: flex;
+    justify-content:space-evenly;
+    gap: 30px;
+
+}
+.tab a{
+    text-decoration: none;
+    color: #fff;
+}
+.tab p a:hover {
+    color: #e94f37;
+}
